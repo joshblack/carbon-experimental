@@ -1,0 +1,126 @@
+@import 'colors';
+@import 'vars';
+@import 'mixins';
+@import 'typography';
+@import 'css--reset';
+@import 'import-once';
+
+@mixin typography {
+  // really big
+  .bx--type-giga {
+    @include typescale('giga');
+    @include reset;
+    @include line-height('heading');
+    font-weight: 300;
+  }
+
+  .bx--type-mega {
+    @include typescale('mega');
+    @include reset;
+    @include line-height('heading');
+    font-weight: 300;
+  }
+
+  // really small
+  .bx--type-omega {
+    @include typescale('omega');
+    @include reset;
+    @include line-height('heading');
+    font-weight: 600;
+  }
+
+  .bx--type-caption {
+    @include typescale('caption');
+    @include reset;
+    @include line-height('body');
+    font-weight: 400;
+  }
+
+  .bx--type-legal {
+    @include typescale('legal');
+    @include reset;
+    @include line-height('body');
+    font-weight: 400;
+  }
+
+  .bx--type-caps {
+    text-transform: uppercase;
+  }
+
+  strong,
+  .bx--type-strong {
+    @include reset;
+    font-weight: 700;
+  }
+
+  p {
+    @include reset;
+    @include typescale('p');
+    @include line-height('body');
+    font-weight: 400;
+  }
+
+  em {
+    @include reset;
+    font-style: italic;
+  }
+
+  a {
+    @include reset;
+    color: $brand-01;
+  }
+
+  h1,
+  .bx--type-alpha {
+    @include reset;
+    @include typescale('alpha');
+    @include line-height('heading');
+    font-weight: 300;
+  }
+
+  h2,
+  .bx--type-beta {
+    @include reset;
+    @include typescale('beta');
+    @include line-height('heading');
+    font-weight: 300;
+  }
+
+  h3,
+  .bx--type-gamma {
+    @include reset;
+    @include typescale('gamma');
+    @include line-height('heading');
+    font-weight: 300;
+  }
+
+  h4,
+  .bx--type-delta {
+    @include reset;
+    @include typescale('delta');
+    @include line-height('heading');
+    font-weight: 600;
+  }
+
+  h5,
+  .bx--type-epsilon {
+    @include reset;
+    @include typescale('epsilon');
+    @include line-height('heading');
+    font-weight: 600;
+  }
+
+  h6,
+  .bx--type-zeta {
+    @include reset;
+    @include typescale('zeta');
+    @include line-height('heading');
+    font-weight: 600;
+  }
+}
+
+@include exports('css--typography') {
+  @if global-variable-exists('css--typography') == false or $css--typography == true {
+    @include typography;
+  }
+}
