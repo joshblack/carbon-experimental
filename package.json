@@ -1,0 +1,57 @@
+{
+  "name": "@carbon/carbon",
+  "private": true,
+  "license": "Apache-2.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "ci-check": "yarn prettier:diff",
+    "precommit": "lint-staged",
+    "prettier": "prettier --write \"**/*.{css,js,md,scss}\"",
+    "prettier:diff": "prettier --list-different \"**/*.{css,js,md,scss}\""
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.0.4",
+    "husky": "^0.14.3",
+    "jest": "^22.0.4",
+    "lerna": "^2.5.1",
+    "lint-staged": "^6.0.0",
+    "prettier": "^1.9.2",
+    "validate-commit-msg": "^2.14.0"
+  },
+  "prettier": {
+    "jsxBracketSameLine": true,
+    "printWidth": 80,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier",
+      "git add"
+    ],
+    "*.{css,md,scss}": [
+      "prettier",
+      "git add"
+    ]
+  },
+  "config": {
+    "validate-commit-msg": {
+      "types": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "perf",
+        "test",
+        "chore",
+        "revert"
+      ],
+      "maxSubjectLength": 100,
+      "helpMessage": "\nNeed help? We're currently using a commit convention that is outlined here:\nhttps://github.com/conventional-changelog/conventional-changelog/blob/v0.5.3/conventions/angular.md\n\nWe use this convention in order to make contributions to the project clear and predictable.\n\nCurrently, we support the following types: feat, fix, docs, style, refactor, perf, test, chore, revert.\n\nYou can use these types in your commit message in the following fashion:\n\n$ git commit -m \"<type>(<scope>): some commit message here\""
+    }
+  }
+}
