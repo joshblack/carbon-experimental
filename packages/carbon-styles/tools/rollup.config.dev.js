@@ -12,20 +12,20 @@ module.exports = {
   plugins: [
     resolve({
       jsnext: true,
-      main: true,
+      main: true
     }),
     commonjs({
       include: 'node_modules/**',
-      sourceMap: true,
+      sourceMap: true
     }),
     babel({
       exclude: 'node_modules/**',
-      plugins: ['external-helpers'],
+      plugins: ['external-helpers']
     }),
     replace({
-      'process.env.NODE_ENV': JSON.stringify('development'),
-    }),
+      'process.env.NODE_ENV': JSON.stringify('development')
+    })
   ],
   file: 'demo/demo.js',
-  sourcemap: 'inline',
+  sourcemap: 'inline'
 };

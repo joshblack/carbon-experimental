@@ -94,7 +94,7 @@
 // Options
 
 .bx--data-table-v2-header {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .bx--data-table-v2--zebra {
@@ -148,5 +148,5 @@
 
 .bx--data-table-v2--zebra tbody tr.bx--data-table-v2--selected,
 tbody tr.bx--data-table-v2--selected {
-  background-color: rgba($brand-02, .10);
+  background-color: rgba($brand-02, 0.1);
 }

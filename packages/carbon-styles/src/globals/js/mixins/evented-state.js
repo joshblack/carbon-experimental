@@ -39,7 +39,7 @@ export default function(ToMix) {
 
       const data = {
         group: detail && detail.group,
-        state,
+        state
       };
 
       const eventNameSuffix = [data.group, state]
@@ -52,7 +52,7 @@ export default function(ToMix) {
       const eventStart = new CustomEvent(this.options[`eventBefore${eventNameSuffix}`], {
         bubbles: true,
         cancelable: true,
-        detail,
+        detail
       });
 
       const fireOnNode = (detail && detail.delegatorNode) || this.element;
@@ -71,7 +71,7 @@ export default function(ToMix) {
             new CustomEvent(this.options[`eventAfter${eventNameSuffix}`], {
               bubbles: true,
               cancelable: true,
-              detail,
+              detail
             })
           );
           if (callback) {

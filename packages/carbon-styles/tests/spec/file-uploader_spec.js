@@ -34,7 +34,7 @@ describe('File Uploader', function() {
         selectorContainer: '[data-file-container]',
         selectorCloseButton: '.bx--file-close',
         eventBeforeDeleteFilenameFileuploader: 'fileuploader-before-delete-filename',
-        eventAfterDeleteFilenameFileuploader: 'fileuploader-after-delete-filename',
+        eventAfterDeleteFilenameFileuploader: 'fileuploader-after-delete-filename'
       });
     });
 

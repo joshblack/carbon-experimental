@@ -12,7 +12,7 @@ describe('Test content switcher', function() {
         selectorButton: 'input[type="radio"], .bx--content-switcher-btn',
         classActive: 'bx--content-switcher--selected',
         eventBeforeSelected: 'content-switcher-beingselected',
-        eventAfterSelected: 'content-switcher-selected',
+        eventAfterSelected: 'content-switcher-selected'
       });
     });
   });
@@ -223,7 +223,7 @@ describe('Test content switcher', function() {
 
       new ContentSwitcher(element, {
         selectorButton: 'button',
-        selectorLink: 'a',
+        selectorLink: 'a'
       });
     });
 

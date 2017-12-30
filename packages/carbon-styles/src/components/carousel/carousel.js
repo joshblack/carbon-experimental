@@ -50,7 +50,7 @@ class Carousel extends mixin(createComponent, initComponentBySearch) {
     selectorScrollRight: '[data-scroll-right]',
     selectorScrollLeft: '[data-scroll-left]',
     selectorCarouselBtn: '.bx--carousel__btn',
-    selectorCarouselItem: '.bx--carousel__item',
+    selectorCarouselItem: '.bx--carousel__item'
   };
 
   /**

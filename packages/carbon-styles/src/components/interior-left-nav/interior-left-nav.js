@@ -124,7 +124,7 @@ class InteriorLeftNav extends mixin(createComponent, initComponentBySearch) {
     const eventStart = new CustomEvent(this.options.eventBeforeLeftNavToggled, {
       bubbles: true,
       cancelable: true,
-      detail: { collapsed: !collapsed }, // shows where the toggle is going, not where it is
+      detail: { collapsed: !collapsed } // shows where the toggle is going, not where it is
     });
 
     if (this.element.dispatchEvent(eventStart)) {
@@ -142,7 +142,7 @@ class InteriorLeftNav extends mixin(createComponent, initComponentBySearch) {
             new CustomEvent(this.options.eventAfterLeftNavToggled, {
               bubbles: true,
               cancelable: true,
-              detail: { collapsed: true },
+              detail: { collapsed: true }
             })
           );
         }, 250);
@@ -159,7 +159,7 @@ class InteriorLeftNav extends mixin(createComponent, initComponentBySearch) {
             new CustomEvent(this.options.eventAfterLeftNavToggled, {
               bubbles: true,
               cancelable: true,
-              detail: { collapsed: false },
+              detail: { collapsed: false }
             })
           );
         }, 250);
@@ -206,7 +206,7 @@ class InteriorLeftNav extends mixin(createComponent, initComponentBySearch) {
     // Option
     expandTitle: 'Expand nav pane',
     collapseTitle: 'Collapse nav pane',
-    keepOpen: false,
+    keepOpen: false
   };
 }
 

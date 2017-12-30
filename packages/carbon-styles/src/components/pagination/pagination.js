@@ -33,14 +33,14 @@ class Pagination extends mixin(createComponent, initComponentBySearch) {
         const detail = {
           initialEvt: evt,
           element: evt.target,
-          direction: 'backward',
+          direction: 'backward'
         };
         this._emitEvent(this.options.eventPageChange, detail);
       } else if (evt.target.matches(this.options.selectorPageForward)) {
         const detail = {
           initialEvt: evt,
           element: evt.target,
-          direction: 'forward',
+          direction: 'forward'
         };
         this._emitEvent(this.options.eventPageChange, detail);
       }
@@ -51,14 +51,14 @@ class Pagination extends mixin(createComponent, initComponentBySearch) {
         const detail = {
           initialEvt: evt,
           element: evt.target,
-          value: evt.target.value,
+          value: evt.target.value
         };
         this._emitEvent(this.options.eventItemsPerPage, detail);
       } else if (evt.target.matches(this.options.selectorPageNumberInput)) {
         const detail = {
           initialEvt: evt,
           element: evt.target,
-          value: evt.target.value,
+          value: evt.target.value
         };
         this._emitEvent(this.options.eventPageNumber, detail);
       }
@@ -74,7 +74,7 @@ class Pagination extends mixin(createComponent, initComponentBySearch) {
     const event = new CustomEvent(`${evtName}`, {
       bubbles: true,
       cancelable: true,
-      detail,
+      detail
     });
 
     this.element.dispatchEvent(event);
@@ -115,7 +115,7 @@ class Pagination extends mixin(createComponent, initComponentBySearch) {
     selectorPageForward: '[data-page-forward]',
     eventItemsPerPage: 'itemsPerPage',
     eventPageNumber: 'pageNumber',
-    eventPageChange: 'pageChange',
+    eventPageChange: 'pageChange'
   };
 }
 

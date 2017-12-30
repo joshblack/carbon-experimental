@@ -25,7 +25,7 @@ class ProgressIndicator extends mixin(createComponent, initComponentBySearch) {
     super(element, options);
     this.state = {
       currentIndex: this.getCurrent().index,
-      totalSteps: this.getSteps().length,
+      totalSteps: this.getSteps().length
     };
   }
 
@@ -35,7 +35,7 @@ class ProgressIndicator extends mixin(createComponent, initComponentBySearch) {
   getSteps() {
     return [...this.element.querySelectorAll(this.options.selectorStepElement)].map((element, index) => ({
       element,
-      index,
+      index
     }));
   }
 
@@ -65,7 +65,7 @@ class ProgressIndicator extends mixin(createComponent, initComponentBySearch) {
           this._updateStep({
             element: step.element,
             className: this.options.classComplete,
-            html: this._getSVGComplete(),
+            html: this._getSVGComplete()
           });
         }
 
@@ -73,7 +73,7 @@ class ProgressIndicator extends mixin(createComponent, initComponentBySearch) {
           this._updateStep({
             element: step.element,
             className: this.options.classCurrent,
-            html: this._getCurrentSVG(),
+            html: this._getCurrentSVG()
           });
         }
 
@@ -81,7 +81,7 @@ class ProgressIndicator extends mixin(createComponent, initComponentBySearch) {
           this._updateStep({
             element: step.element,
             className: this.options.classIncomplete,
-            html: this._getIncompleteSVG(),
+            html: this._getIncompleteSVG()
           });
         }
       });
@@ -167,7 +167,7 @@ class ProgressIndicator extends mixin(createComponent, initComponentBySearch) {
     classStep: 'bx--progress-step',
     classComplete: 'bx--progress-step--complete',
     classCurrent: 'bx--progress-step--current',
-    classIncomplete: 'bx--progress-step--incomplete',
+    classIncomplete: 'bx--progress-step--incomplete'
   };
 }
 

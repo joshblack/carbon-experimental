@@ -39,7 +39,7 @@ export default function(ToMix) {
             if (launcher) {
               event.delegateTarget = launcher; // eslint-disable-line no-param-reassign
               const elements = [
-                ...launcher.ownerDocument.querySelectorAll(launcher.getAttribute(effectiveOptions.attribInitTarget)),
+                ...launcher.ownerDocument.querySelectorAll(launcher.getAttribute(effectiveOptions.attribInitTarget))
               ];
               if (elements.length > 1) {
                 throw new Error('Target widget must be unique.');
@@ -63,7 +63,7 @@ export default function(ToMix) {
             for (let handle = handles.pop(); handle; handle = handles.pop()) {
               handle.release();
             }
-          },
+          }
         };
       }
       return '';

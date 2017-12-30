@@ -31,7 +31,7 @@ describe('StructuredList', function() {
       expect(instance.options).to.deep.equal({
         selectorInit: '[data-structured-list]',
         selectorRow: '[data-structured-list] .bx--structured-list-tbody > label.bx--structured-list-row',
-        classActive: 'bx--structured-list-row--selected',
+        classActive: 'bx--structured-list-row--selected'
       });
     });
 
@@ -59,7 +59,7 @@ describe('StructuredList', function() {
       spy = sinon.spy(instance, '_handleKeydownChecked');
       const event = Object.assign(
         new CustomEvent('keydown', {
-          bubbles: true,
+          bubbles: true
         }),
         { which: 13 }
       );
@@ -71,7 +71,7 @@ describe('StructuredList', function() {
       spy = sinon.spy(instance, '_handleKeydownChecked');
       const event = Object.assign(
         new CustomEvent('keydown', {
-          bubbles: true,
+          bubbles: true
         }),
         { which: 32 }
       );
@@ -83,7 +83,7 @@ describe('StructuredList', function() {
       spy = sinon.spy(instance, '_handleKeydownChecked');
       const event = Object.assign(
         new CustomEvent('keydown', {
-          bubbles: true,
+          bubbles: true
         }),
         { which: 40 }
       );
@@ -116,7 +116,7 @@ describe('StructuredList', function() {
       spy = sinon.spy(instance, '_handleClick');
       const event = Object.assign(
         new CustomEvent('click', {
-          bubbles: true,
+          bubbles: true
         })
       );
       instance.element.dispatchEvent(event);
@@ -127,7 +127,7 @@ describe('StructuredList', function() {
       spy = sinon.spy(instance, '_handleClick');
       const event = Object.assign(
         new CustomEvent('click', {
-          bubbles: true,
+          bubbles: true
         })
       );
       const rows = instance.element.querySelectorAll(instance.options.selectorRow);
@@ -160,7 +160,7 @@ describe('StructuredList', function() {
       spy = sinon.spy(instance, '_direction');
       const event = Object.assign(
         new CustomEvent('keydown', {
-          bubbles: true,
+          bubbles: true
         }),
         { which: 38 }
       );
@@ -172,7 +172,7 @@ describe('StructuredList', function() {
       spy = sinon.spy(instance, '_direction');
       const event = Object.assign(
         new CustomEvent('keydown', {
-          bubbles: true,
+          bubbles: true
         }),
         { which: 40 }
       );
@@ -183,7 +183,7 @@ describe('StructuredList', function() {
     it('should return -1 on "up" key', function() {
       const event = Object.assign(
         new CustomEvent('keydown', {
-          bubbles: true,
+          bubbles: true
         }),
         { which: 38 }
       );
@@ -194,7 +194,7 @@ describe('StructuredList', function() {
     it('should return 1 on "down" key', function() {
       const event = Object.assign(
         new CustomEvent('keydown', {
-          bubbles: true,
+          bubbles: true
         }),
         { which: 40 }
       );
@@ -205,7 +205,7 @@ describe('StructuredList', function() {
     it('should return undefined on other key presses', function() {
       const event = Object.assign(
         new CustomEvent('keydown', {
-          bubbles: true,
+          bubbles: true
         }),
         { which: 70 }
       );
@@ -298,7 +298,7 @@ describe('StructuredList', function() {
       spy = sinon.spy(instance, '_handleKeydownArrow');
       const event = Object.assign(
         new CustomEvent('keydown', {
-          bubbles: true,
+          bubbles: true
         }),
         { which: 38 }
       );
@@ -310,7 +310,7 @@ describe('StructuredList', function() {
       spy = sinon.spy(instance, '_handleKeydownArrow');
       const event = Object.assign(
         new CustomEvent('keydown', {
-          bubbles: true,
+          bubbles: true
         }),
         { which: 40 }
       );
@@ -322,7 +322,7 @@ describe('StructuredList', function() {
       spy = sinon.spy(instance, '_handleKeydownArrow');
       const event = Object.assign(
         new CustomEvent('keydown', {
-          bubbles: true,
+          bubbles: true
         }),
         { which: 13 }
       );

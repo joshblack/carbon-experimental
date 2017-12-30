@@ -14,7 +14,7 @@ describe('Test watch mode', function() {
   const ClassInitedBySearch = class extends mixin(createComponent, initComponentBySearch) {
     release = spyReleaseComponentBySearch;
     static options = {
-      selectorInit: '[data-my-component-inited-by-search]',
+      selectorInit: '[data-my-component-inited-by-search]'
     };
     static components = new WeakMap();
   };
@@ -26,7 +26,7 @@ describe('Test watch mode', function() {
     release = spyReleaseComponentByEvent;
     static options = {
       selectorInit: '[data-my-component-inited-by-event]',
-      initEventNames: ['instantiating-event'],
+      initEventNames: ['instantiating-event']
     };
     static components = new WeakMap();
   };
@@ -39,7 +39,7 @@ describe('Test watch mode', function() {
     static options = {
       selectorInit: '[data-my-component-inited-by-launcher]',
       attribInitTarget: 'data-init-target',
-      initEventNames: ['launching-event'],
+      initEventNames: ['launching-event']
     };
     static components = new WeakMap();
   };
@@ -112,7 +112,7 @@ describe('Test watch mode', function() {
       elementInitedByEvent.dispatchEvent(
         new CustomEvent('instantiating-event', {
           bubbles: true,
-          cancelable: true,
+          cancelable: true
         })
       );
 

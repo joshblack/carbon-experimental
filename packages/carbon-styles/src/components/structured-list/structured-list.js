@@ -31,7 +31,7 @@ class StructuredList extends mixin(createComponent, initComponentBySearch) {
   _direction(evt) {
     return {
       38: -1, // backward
-      40: 1, // forward
+      40: 1 // forward
     }[evt.which];
   }
 
@@ -106,7 +106,7 @@ class StructuredList extends mixin(createComponent, initComponentBySearch) {
   static options = {
     selectorInit: '[data-structured-list]',
     selectorRow: '[data-structured-list] .bx--structured-list-tbody > label.bx--structured-list-row',
-    classActive: 'bx--structured-list-row--selected',
+    classActive: 'bx--structured-list-row--selected'
   };
 }
 

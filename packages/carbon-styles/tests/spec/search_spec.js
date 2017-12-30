@@ -27,7 +27,7 @@ describe('Test Search', function() {
           selectorClearIcon: '.bx--search-close',
           selectorIconContainer: '.bx--search-button[data-search-toggle]',
           classClearHidden: 'bx--search-close--hidden',
-          classLayoutHidden: 'bx--search-view--hidden',
+          classLayoutHidden: 'bx--search-view--hidden'
         });
       } finally {
         search.release();

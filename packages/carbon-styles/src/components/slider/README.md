@@ -4,16 +4,16 @@
 
 Use these modifiers with `.bx--slider` class.
 
-| Selector                 | Description                                                         |
-|--------------------------|---------------------------------------------------------------------|
-| .bx--slider--disabled    | Applies disabled styling and prevents JS from running on user input |
+| Selector              | Description                                                         |
+| --------------------- | ------------------------------------------------------------------- |
+| .bx--slider--disabled | Applies disabled styling and prevents JS from running on user input |
 
-### Javascript                                                                                                                                 
+### Javascript
 
 #### Options
 
 | Option                         | Default Selector             | Description                                                               |
-|--------------------------------|------------------------------|---------------------------------------------------------------------------|
+| ------------------------------ | ---------------------------- | ------------------------------------------------------------------------- |
 | `selectorInit`                 | `[data-slider]`              | The selector to find the Slider element.                                  |
 | `selectorTrack`                | `.bx--slider__track`         | The selector to find the Slider track element.                            |
 | `selectorFilledTrack`          | `.bx--slider__filled-track`  | The selector to find the Slider filled track element.                     |
@@ -29,6 +29,6 @@ Use these modifiers with `.bx--slider` class.
 
 Once `Slider` instance is initialized a user can use the following keys to control the slider.
 
-- `up` and `right` arrow keys increase the slider value by one step
-- `down` and `left` arrow keys decrease the slider value by one step
-- Pressing `shift` while changing the value of the slider will multiple the change by `Slider.options.stepMultiplier` (the default is 4)
+* `up` and `right` arrow keys increase the slider value by one step
+* `down` and `left` arrow keys decrease the slider value by one step
+* Pressing `shift` while changing the value of the slider will multiple the change by `Slider.options.stepMultiplier` (the default is 4)

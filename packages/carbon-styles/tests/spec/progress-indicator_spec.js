@@ -37,7 +37,7 @@ describe('ProgressIndicator', function() {
         classStep: 'bx--progress-step',
         classComplete: 'bx--progress-step--complete',
         classCurrent: 'bx--progress-step--current',
-        classIncomplete: 'bx--progress-step--incomplete',
+        classIncomplete: 'bx--progress-step--incomplete'
       });
     });
 
@@ -71,7 +71,7 @@ describe('ProgressIndicator', function() {
       const el = instance.element.querySelector(instance.options.selectorIncomplete);
       instance._updateStep({
         element: el,
-        className: instance.options.classComplete,
+        className: instance.options.classComplete
       });
       expect(el.firstElementChild.tagName).to.not.equal('svg');
     });
@@ -80,7 +80,7 @@ describe('ProgressIndicator', function() {
       const el = instance.element.querySelector(instance.options.selectorIncomplete);
       instance._updateStep({
         element: el,
-        className: instance.options.classComplete,
+        className: instance.options.classComplete
       });
       expect(el.classList.contains(instance.options.classComplete)).to.equal(true);
     });

@@ -498,7 +498,7 @@ class LeftNav extends mixin(createComponent, initComponentBySearch) {
     classItemFade: 'bx--main-nav__parent-item--fade',
     classItemHidden: 'bx--main-nav__parent-item--hidden',
     classListHidden: 'bx--left-nav__main-nav--hidden',
-    classListTop: 'bx--left-nav__main-nav--top',
+    classListTop: 'bx--left-nav__main-nav--top'
   };
 
   /**

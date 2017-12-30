@@ -4,6 +4,6 @@ export default function on(element, ...args) {
     release() {
       element.removeEventListener(...args);
       return null;
-    },
+    }
   };
 }

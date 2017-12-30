@@ -38,9 +38,9 @@ const del = require('del');
 const Server = require('karma').Server;
 const cloptions = require('minimist')(process.argv.slice(2), {
   alias: {
-    k: 'keepalive',
+    k: 'keepalive'
   },
-  boolean: ['keepalive'],
+  boolean: ['keepalive']
 });
 
 // Axe A11y Test
@@ -56,7 +56,7 @@ gulp.task('browser-sync', ['build:dev'], () => {
     logPrefix: 'Carbon Components',
     open: false,
     proxy: 'localhost:8080',
-    timestamps: false,
+    timestamps: false
   });
 });
 
@@ -78,7 +78,7 @@ gulp.task('clean', () =>
     '!demo/js/demo-switcher.js',
     '!demo/js/theme-switcher.js',
     '!demo/index.js',
-    '!demo/polyfills/*.js',
+    '!demo/polyfills/*.js'
   ])
 );
 
@@ -103,12 +103,12 @@ gulp.task('scripts:umd', () => {
         'env',
         {
           targets: {
-            browsers: ['last 1 version', 'ie >= 11'],
-          },
-        },
-      ],
+            browsers: ['last 1 version', 'ie >= 11']
+          }
+        }
+      ]
     ],
-    plugins: ['transform-es2015-modules-umd', 'transform-class-properties'],
+    plugins: ['transform-es2015-modules-umd', 'transform-class-properties']
   };
 
   return gulp
@@ -126,12 +126,12 @@ gulp.task('scripts:es', () => {
         {
           modules: false,
           targets: {
-            browsers: ['last 1 version', 'ie >= 11'],
-          },
-        },
-      ],
+            browsers: ['last 1 version', 'ie >= 11']
+          }
+        }
+      ]
     ],
-    plugins: ['transform-class-properties'],
+    plugins: ['transform-class-properties']
   };
 
   return gulp
@@ -159,12 +159,12 @@ gulp.task('sass:compiled', () => {
       .pipe(sourcemaps.init())
       .pipe(
         sass({
-          outputStyle: prod ? 'compressed' : 'expanded',
+          outputStyle: prod ? 'compressed' : 'expanded'
         }).on('error', sass.logError)
       )
       .pipe(
         autoprefixer({
-          browsers: ['> 1%', 'last 2 versions'],
+          browsers: ['> 1%', 'last 2 versions']
         })
       )
       .pipe(
@@ -180,7 +180,7 @@ gulp.task('sass:compiled', () => {
       .pipe(
         sourcemaps.write('.', {
           includeContent: false,
-          sourceRoot: '../src',
+          sourceRoot: '../src'
         })
       )
       .pipe(gulp.dest('css'))
@@ -197,12 +197,12 @@ gulp.task('sass:dev', () =>
     .pipe(sourcemaps.init())
     .pipe(
       sass({
-        outputStyle: 'expanded',
+        outputStyle: 'expanded'
       }).on('error', sass.logError)
     )
     .pipe(
       autoprefixer({
-        browsers: ['> 1%', 'last 2 versions'],
+        browsers: ['> 1%', 'last 2 versions']
       })
     )
     .pipe(sourcemaps.write('.'))
@@ -238,7 +238,7 @@ gulp.task('lint', () =>
         if (count > 0) {
           throw new gutil.PluginError('gulp-eslint', {
             name: 'ESLintWarning',
-            message: `Has ${count} warning${count > 1 ? 's' : ''}`,
+            message: `Has ${count} warning${count > 1 ? 's' : ''}`
           });
         }
       })
@@ -255,7 +255,7 @@ gulp.task('jsdoc', cb => {
     .pipe(
       babel({
         plugins: ['transform-class-properties'],
-        babelrc: false,
+        babelrc: false
       })
     )
     .pipe(gulp.dest('./docs/js/tmp'))
@@ -265,8 +265,8 @@ gulp.task('jsdoc', cb => {
           Object.assign(jsdocConfig, {
             // eslint-disable-line global-require
             opts: {
-              destination: './docs/js',
-            },
+              destination: './docs/js'
+            }
           }),
           err => {
             if (err) {
@@ -291,7 +291,7 @@ gulp.task('test:unit', done => {
   new Server(
     {
       configFile: path.resolve(__dirname, 'tests/karma.conf.js'),
-      singleRun: !cloptions.keepalive,
+      singleRun: !cloptions.keepalive
     },
     done
   ).start();
@@ -304,8 +304,8 @@ gulp.task('test:a11y', ['sass:compiled'], done => {
       rules: {
         'html-has-lang': { enabled: false },
         bypass: { enabled: false },
-        'image-alt': { enabled: false },
-      },
+        'image-alt': { enabled: false }
+      }
     },
     verbose: true,
     showOnlyViolations: true,
@@ -313,7 +313,7 @@ gulp.task('test:a11y', ['sass:compiled'], done => {
     tags: ['wcag2aa', 'wcag2a'],
     folderOutputReport: componentName === undefined ? 'tests/axe/allHtml' : 'tests/axe',
     saveOutputIn: componentName === undefined ? `a11y-html.json` : `a11y-${componentName}.json`,
-    urls: componentName === undefined ? ['http://localhost:3000'] : [`http://localhost:3000/components/${componentName}/`],
+    urls: componentName === undefined ? ['http://localhost:3000'] : [`http://localhost:3000/components/${componentName}/`]
   };
 
   return axe(options, done);

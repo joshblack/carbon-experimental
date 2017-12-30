@@ -103,7 +103,7 @@ class Loading extends mixin(createComponent, initComponentBySearch) {
     selectorInit: '[data-loading]',
     selectorLoadingOverlay: '.bx--loading-overlay',
     classLoadingOverlayStop: 'bx--loading-overlay--stop',
-    active: true,
+    active: true
   };
 }
 

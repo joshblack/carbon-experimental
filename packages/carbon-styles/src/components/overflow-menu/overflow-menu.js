@@ -58,7 +58,7 @@ class OverflowMenu extends mixin(createComponent, initComponentBySearch, evented
         refNode: this.element,
         classShown: this.options.classMenuShown,
         classRefShown: this.options.classShown,
-        offset: this.options.objMenuOffset,
+        offset: this.options.objMenuOffset
       });
       this.children.push(this.optionMenu);
     }
@@ -135,7 +135,7 @@ class OverflowMenu extends mixin(createComponent, initComponentBySearch, evented
     classMenuShown: 'bx--overflow-menu-options--open',
     classMenuFlip: 'bx--overflow-menu--flip',
     objMenuOffset: { top: 3, left: 61 },
-    objMenuOffsetFlip: { top: 3, left: -61 },
+    objMenuOffsetFlip: { top: 3, left: -61 }
   };
 }
 

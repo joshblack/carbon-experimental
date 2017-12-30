@@ -18,7 +18,7 @@ describe('Test card', function() {
       const cardlist = new Card(document.createElement('div'));
       expect(cardlist.options).to.deep.equal({
         selectorInit: '[data-card-list]',
-        selectorCard: '.bx--card',
+        selectorCard: '.bx--card'
       });
     });
   });
@@ -48,7 +48,7 @@ describe('Test card', function() {
       spyFocus = sinon.spy(cardNodes[1], 'focus');
       cardNodes[0].dispatchEvent(
         Object.assign(new CustomEvent('keydown', { bubbles: true }), {
-          which: 39,
+          which: 39
         })
       );
       expect(spyFocus).to.be.calledOnce;
@@ -59,7 +59,7 @@ describe('Test card', function() {
       spyFocus = sinon.spy(cardNodes[0], 'focus');
       cardNodes[1].dispatchEvent(
         Object.assign(new CustomEvent('keydown', { bubbles: true }), {
-          which: 39,
+          which: 39
         })
       );
       expect(spyFocus).to.be.calledOnce;
@@ -69,7 +69,7 @@ describe('Test card', function() {
       spyFocus = sinon.spy(cardNodes[1], 'focus');
       cardNodes[0].dispatchEvent(
         Object.assign(new CustomEvent('keydown', { bubbles: true }), {
-          which: 37,
+          which: 37
         })
       );
       expect(spyFocus).to.be.calledOnce;

@@ -22,7 +22,7 @@ function initCheckbox(doc = document) {
     release() {
       doc.removeEventListener('change', listener);
       return null;
-    },
+    }
   };
 }
 

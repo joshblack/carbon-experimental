@@ -31,7 +31,7 @@ describe('Test accordion', function() {
         selectorAccordionItem: '.bx--accordion__item',
         selectorAccordionItemHeading: '.bx--accordion__heading',
         selectorAccordionContent: '.bx--accordion__content',
-        classActive: 'bx--accordion__item--active',
+        classActive: 'bx--accordion__item--active'
       });
     });
 

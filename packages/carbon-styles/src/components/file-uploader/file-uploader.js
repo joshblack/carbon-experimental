@@ -125,7 +125,7 @@ class FileUploader extends mixin(createComponent, initComponentBySearch, evented
         el.addEventListener('click', evt => {
           const detail = {
             initialEvt: evt,
-            filenameElement: evt.currentTarget.parentNode,
+            filenameElement: evt.currentTarget.parentNode
           };
           this._changeState('delete-filename-fileuploader', detail);
         });
@@ -154,7 +154,7 @@ class FileUploader extends mixin(createComponent, initComponentBySearch, evented
     selectorContainer: '[data-file-container]',
     selectorCloseButton: '.bx--file-close',
     eventBeforeDeleteFilenameFileuploader: 'fileuploader-before-delete-filename',
-    eventAfterDeleteFilenameFileuploader: 'fileuploader-after-delete-filename',
+    eventAfterDeleteFilenameFileuploader: 'fileuploader-after-delete-filename'
   };
 }
 

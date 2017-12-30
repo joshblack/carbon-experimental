@@ -29,24 +29,24 @@ const cloptions = require('minimist')(process.argv.slice(2), {
     b: 'browsers',
     f: 'files',
     d: 'debug',
-    v: 'verbose',
+    v: 'verbose'
   },
-  boolean: ['debug', 'verbose'],
+  boolean: ['debug', 'verbose']
 });
 
 const customLaunchers = {
   Chrome_Travis: {
     base: 'Chrome',
-    flags: ['--no-sandbox'],
+    flags: ['--no-sandbox']
   },
   ChromeHeadless_Travis: {
     base: 'ChromeHeadless',
-    flags: ['--no-sandbox'],
-  },
+    flags: ['--no-sandbox']
+  }
 };
 
 const travisLaunchers = {
-  chrome: 'Chrome_Travis',
+  chrome: 'Chrome_Travis'
 };
 
 module.exports = function(config) {
@@ -62,7 +62,7 @@ module.exports = function(config) {
         cloptions.files || [
           'node_modules/core-js/modules/es6.weak-map.js', // For generatoring coverage report for untested files
           'src/{components,globals}/**/*.js', // For generatoring coverage report for untested files
-          'tests/spec/**/*.js',
+          'tests/spec/**/*.js'
         ]
       );
       const htmlFiles = list.filter(file => minimatch(file, 'src/components/**/*.html'));
@@ -78,14 +78,14 @@ module.exports = function(config) {
     })(),
 
     exclude: [
-      'src/globals/js/watch.js', // watch.js imports index.js, which runs automatic instantiation
+      'src/globals/js/watch.js' // watch.js imports index.js, which runs automatic instantiation
     ],
 
     preprocessors: {
       '**/core-js/**/*.js': ['rollup', 'sourcemap'], // For generatoring coverage report for untested files
       'src/**/*.js': ['rollup', 'sourcemap'], // For generatoring coverage report for untested files
       'tests/spec/**/*.js': ['rollup', 'sourcemap'],
-      'demo/polyfills/**/*.js': ['rollup', 'sourcemap'],
+      'demo/polyfills/**/*.js': ['rollup', 'sourcemap']
     },
 
     rollupPreprocessor: {
@@ -97,20 +97,20 @@ module.exports = function(config) {
             if (id === objectToStringPolyfillPath) {
               return 'export default undefined';
             }
-          },
+          }
         },
         resolve({
           jsnext: true,
-          main: true,
+          main: true
         }),
         string({
-          include: '**/*.html',
+          include: '**/*.html'
         }),
         commonjs({
           include: ['node_modules/**'],
           namedExports: {
-            'node_modules/bluebird/js/release/bluebird.js': ['delay', 'promisify'],
-          },
+            'node_modules/bluebird/js/release/bluebird.js': ['delay', 'promisify']
+          }
         }),
         babel({
           exclude: 'node_modules/**',
@@ -121,10 +121,10 @@ module.exports = function(config) {
               {
                 modules: false,
                 targets: {
-                  browsers: ['last 1 version', 'ie >= 11'],
-                },
-              },
-            ],
+                  browsers: ['last 1 version', 'ie >= 11']
+                }
+              }
+            ]
           ],
           plugins: ['transform-class-properties', ['transform-runtime', { polyfill: false }]].concat(
             cloptions.debug
@@ -133,19 +133,19 @@ module.exports = function(config) {
                   [
                     'istanbul',
                     {
-                      include: ['src/components/**/*.js'],
-                    },
-                  ],
+                      include: ['src/components/**/*.js']
+                    }
+                  ]
                 ]
-          ),
+          )
         }),
         replace({
-          'process.env.NODE_ENV': JSON.stringify('development'),
-        }),
+          'process.env.NODE_ENV': JSON.stringify('development')
+        })
       ],
       format: 'iife',
       name: 'test',
-      sourcemap: 'inline',
+      sourcemap: 'inline'
     },
 
     customLaunchers,
@@ -159,7 +159,7 @@ module.exports = function(config) {
       require('karma-chrome-launcher'),
       require('karma-firefox-launcher'),
       require('karma-safari-launcher'),
-      require('karma-ie-launcher'),
+      require('karma-ie-launcher')
     ],
 
     reporters: (() => {
@@ -173,7 +173,7 @@ module.exports = function(config) {
     coverageReporter: Object.assign(
       {
         dir: 'tests/coverage',
-        reporters: [{ type: 'html' }, { type: 'text' }],
+        reporters: [{ type: 'html' }, { type: 'text' }]
       },
       cloptions.files
         ? {}
@@ -198,10 +198,10 @@ module.exports = function(config) {
                   'src/components/tooltip/tooltip.js',
                   'src/components/unified-header/left-nav.js',
                   'src/components/unified-header/profile-switcher.js',
-                  'src/globals/js/misc/resize.js',
-                ],
-              },
-            },
+                  'src/globals/js/misc/resize.js'
+                ]
+              }
+            }
           }
     ),
 
@@ -225,6 +225,6 @@ module.exports = function(config) {
 
     singleRun: false,
 
-    concurrency: Infinity,
+    concurrency: Infinity
   });
 };

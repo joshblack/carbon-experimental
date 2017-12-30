@@ -181,7 +181,7 @@ class Modal extends mixin(createComponent, initComponentByLauncher, eventedShowH
     eventBeforeShown: 'modal-beingshown',
     eventAfterShown: 'modal-shown',
     eventBeforeHidden: 'modal-beinghidden',
-    eventAfterHidden: 'modal-hidden',
+    eventAfterHidden: 'modal-hidden'
   };
 }
 

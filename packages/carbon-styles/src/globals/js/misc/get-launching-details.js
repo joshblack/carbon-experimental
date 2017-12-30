@@ -2,7 +2,7 @@ export default function getLaunchingDetails(evt) {
   if (!evt || typeof evt === 'function') {
     return {
       launchingElement: null,
-      launchingEvent: null,
+      launchingEvent: null
     };
   }
 
@@ -19,6 +19,6 @@ export default function getLaunchingDetails(evt) {
 
   return {
     launchingElement,
-    launchingEvent,
+    launchingEvent
   };
 }

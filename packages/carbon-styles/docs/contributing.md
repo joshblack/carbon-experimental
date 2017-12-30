@@ -3,6 +3,7 @@
 ## Requirements
 
 Set up your SSH Key GitHub Enterprise account and install node.js 4 or higher.
+
 * [Generating SSH Keys - GitHub](https://help.github.com/articles/generating-ssh-keys/)
 * [`NVM` (node version manager)](https://github.com/creationix/nvm) to use the `Node 6`.
 
@@ -13,7 +14,7 @@ Contributing to carbon-components requires that you can run this repo locally on
 Prefix all class names with `bx--`.
 This prefix prevents potential conflicts with class names from the user.
 
-__HTML__
+**HTML**
 
 ```html
 <div class="bx--inline-notification bx--inline-notification--error" role="alert">
@@ -21,7 +22,7 @@ __HTML__
 </div>
 ```
 
-__SCSS__
+**SCSS**
 
 ```scss
 .bx--inline-notification {
@@ -50,6 +51,7 @@ A nested element can use a new block name as long as the styles are independent 
   <button class="bx--component-button">Button</button>
 </div>
 ```
+
 :point_up: The `bx--component-button` class implies that this button has independent styles from its parent.
 Generally, it's preferred to start a new block.
 
@@ -57,15 +59,15 @@ Generally, it's preferred to start a new block.
 
 Avoid names with multiple `__element` names:
 
-- :x: `.bx--card__list__item`
-- :white_check_mark: `.bx--card-item`
-- :white_check_mark: `.bx--card__item`
+* :x: `.bx--card__list__item`
+* :white_check_mark: `.bx--card-item`
+* :white_check_mark: `.bx--card__item`
 
 ## Files and folders
 
 All components belong in `src/components` in their own folder.
 
-Name files and folders using __singular__ form; not plural.
+Name files and folders using **singular** form; not plural.
 
 ```
 button
@@ -109,6 +111,7 @@ git remote -v
 ```
 
 When you do `git remote -v`, you'll see these remotes:
+
 * `origin`: connection to your fork
 * `upstream`: connection to the original project.
 * `bthan`: connection to [Brian Han's](https://github.com/bthan/carbon-components) fork.
@@ -119,21 +122,24 @@ When you do `git remote -v`, you'll see these remotes:
 * Submit pull requests from a branch.
 * All commits must follow the convention outlined [here](https://github.com/conventional-changelog/conventional-changelog/blob/v0.5.3/conventions/angular.md).
 
-> __Writing commit messages__
+> **Writing commit messages**
 >
-> - `<type>` indicates the type of commit that's being made. This can be: `feat`, `fix`, `perf`, `docs`, `chore`, `style`, `refactor`
-> - `<scope>` The scope could be anything specifying place of the commit change or the thing(s) that changed.
+> * `<type>` indicates the type of commit that's being made. This can be: `feat`, `fix`, `perf`, `docs`, `chore`, `style`, `refactor`
+> * `<scope>` The scope could be anything specifying place of the commit change or the thing(s) that changed.
 >
-> __Commit message format:__
+> **Commit message format:**
+>
 > ```
-<type>(<scope>): <subject>
-<BLANK LINE>
+> <type>(<scope>): <subject>
+> <BLANK LINE>
+> ```
+
 <body>
 <BLANK LINE>
 <footer>
 ```
 
-*Do not submit pull requests from the `master` branch of your fork.*
+_Do not submit pull requests from the `master` branch of your fork._
 
 ```
 git checkout -b { YOUR_BRANCH_NAME }
@@ -182,10 +188,10 @@ If you're contributing to our HTML/CSS code, a11y compliance of your code should
 To do so - First, (if you haven't done already) set up an auth token for a11y rules, by:
 
 1. Create AAT token, by:
-  1. Go to https://aat.mybluemix.net/auth/
-  1. Enter IBM ID/password as you log into Bluemix
-  1. Accept user agreement
-  1. Hit Copy Authentication Token button
+1. Go to https://aat.mybluemix.net/auth/
+1. Enter IBM ID/password as you log into Bluemix
+1. Accept user agreement
+1. Hit Copy Authentication Token button
 1. `> sed -e "s|\${NPM_TOKEN}|(The token obtained in above step)|g" < .aat.yml.src > .aat.yml`
 
 Then you can test your changes by running our test commands:
@@ -217,10 +223,11 @@ In your browser, navigate to [carbon-design-system/carbon-components](https://gi
 > **Is it a Breaking Change?**
 
 > We want to respect semver.
-It's important to discern whether your pull request contains breaking changes or not.
-Sometimes, renaming or removing things in the code can result in breaking changes.
+> It's important to discern whether your pull request contains breaking changes or not.
+> Sometimes, renaming or removing things in the code can result in breaking changes.
 
 > Here are some examples of breaking changes...changing, renaming or removing any of the following:
+>
 > * HTML attributes
 > * Folders or Files
 > * Any SCSS `@mixin`, `$variable` or `function`

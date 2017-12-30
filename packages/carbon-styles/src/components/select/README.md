@@ -2,7 +2,7 @@
 
 Carbon Components provides HTML attributes and CSS to enable form validation for each input or control.
 
-For example, here's a __Select__ that provides a message if an option is not selected.
+For example, here's a **Select** that provides a message if an option is not selected.
 
 ```html
 <div class="bx--form-item">

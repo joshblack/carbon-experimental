@@ -22,7 +22,7 @@ class Tile extends mixin(createComponent, initComponentBySearch) {
     const typeObj = {
       expandable: this.options.classExpandedTile,
       clickable: this.options.classClickableTile,
-      selectable: this.options.classSelectableTile,
+      selectable: this.options.classSelectableTile
     };
     return typeObj[type];
   };
@@ -84,7 +84,7 @@ class Tile extends mixin(createComponent, initComponentBySearch) {
     selectorTileInput: '[data-tile-input]',
     classExpandedTile: 'bx--tile--is-expanded',
     classClickableTile: 'bx--tile--is-clicked',
-    classSelectableTile: 'bx--tile--is-selected',
+    classSelectableTile: 'bx--tile--is-selected'
   };
 }
 

@@ -55,7 +55,7 @@ export default function(target = document, options = {}) {
   });
   observer.observe(target, {
     childList: true,
-    subtree: true,
+    subtree: true
   });
   return {
     release() {
@@ -66,6 +66,6 @@ export default function(target = document, options = {}) {
         observer.disconnect();
         observer = null;
       }
-    },
+    }
   };
 }

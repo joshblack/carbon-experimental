@@ -85,7 +85,7 @@ class Tab extends ContentSwitcher {
 
     const direction = {
       37: this.constructor.NAVIGATE.BACKWARD,
-      39: this.constructor.NAVIGATE.FORWARD,
+      39: this.constructor.NAVIGATE.FORWARD
     }[event.which];
 
     if (direction) {
@@ -166,7 +166,7 @@ class Tab extends ContentSwitcher {
     classActive: 'bx--tabs__nav-item--selected',
     classHidden: 'bx--tabs__nav--hidden',
     eventBeforeSelected: 'tab-beingselected',
-    eventAfterSelected: 'tab-selected',
+    eventAfterSelected: 'tab-selected'
   });
 
   /**
@@ -179,7 +179,7 @@ class Tab extends ContentSwitcher {
    */
   static NAVIGATE = {
     BACKWARD: -1,
-    FORWARD: 1,
+    FORWARD: 1
   };
 }
 

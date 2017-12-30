@@ -59,7 +59,7 @@ describe('Test floating menu', function() {
       menu = new FloatingMenu(element, {
         refNode,
         classShown: 'my-floating-menu-open',
-        classRefShown: 'my-floating-menu-trigger-open',
+        classRefShown: 'my-floating-menu-trigger-open'
       });
     });
 
@@ -179,7 +179,7 @@ describe('Test floating menu', function() {
       element = tempDiv.querySelector('ul.bx--overflow-menu-options');
       sinon.stub(element, 'getBoundingClientRect', () => ({
         width: 400,
-        height: 400,
+        height: 400
       }));
       document.body.appendChild(element);
       refNode = document.createElement('div');
@@ -189,7 +189,7 @@ describe('Test floating menu', function() {
         right: 300,
         bottom: 400,
         width: 200,
-        height: 200,
+        height: 200
       }));
       document.body.appendChild(refNode);
       menu = new FloatingMenu(element, {
@@ -198,8 +198,8 @@ describe('Test floating menu', function() {
         classRefShown: 'my-floating-menu-trigger-open',
         offset: {
           left: 25,
-          top: 50,
-        },
+          top: 50
+        }
       });
     });
 
@@ -289,7 +289,7 @@ describe('Test floating menu', function() {
       menu = new FloatingMenu(element, {
         refNode,
         classShown: 'my-floating-menu-open',
-        classRefShown: 'my-floating-menu-trigger-open',
+        classRefShown: 'my-floating-menu-trigger-open'
       });
     });
 
@@ -351,7 +351,7 @@ describe('Test floating menu', function() {
       menu = new FloatingMenu(element, {
         refNode,
         classShown: 'my-floating-menu-open',
-        classRefShown: 'my-floating-menu-trigger-open',
+        classRefShown: 'my-floating-menu-trigger-open'
       });
       spyPlace = sinon.spy(menu, '_place');
       stubRAF = sinon.stub(window, 'requestAnimationFrame', callback => {
@@ -421,7 +421,7 @@ describe('Test floating menu', function() {
       menu = new FloatingMenu(element, {
         refNode,
         classShown: 'my-floating-menu-open',
-        classRefShown: 'my-floating-menu-trigger-open',
+        classRefShown: 'my-floating-menu-trigger-open'
       });
       spyFocusRefNode = sinon.spy(refNode, 'focus');
     });
@@ -441,7 +441,7 @@ describe('Test floating menu', function() {
       // Firefox does not fire `onfocus` event with `input.focus()` call, presumably when the window does not have focus
       input.dispatchEvent(
         Object.assign(new CustomEvent(focusinEventName, { bubbles: true }), {
-          relatedTarget: primaryFocusNode,
+          relatedTarget: primaryFocusNode
         })
       );
       expect(spyFocusRefNode).to.have.been.calledOnce;

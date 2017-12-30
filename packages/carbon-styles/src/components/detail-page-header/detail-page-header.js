@@ -86,7 +86,7 @@ class DetailPageHeader extends mixin(createComponent, initComponentBySearch) {
    */
   static options = {
     selectorInit: '[data-detail-page-header]',
-    scroll: 'bx--detail-page-header--scroll',
+    scroll: 'bx--detail-page-header--scroll'
   };
 }
 

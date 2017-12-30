@@ -40,7 +40,7 @@ describe('Test profile switcher', function() {
         selectorOrgDropdown: '[data-dropdown-org]',
         selectorSpaceDropdown: '[data-dropdown-space]',
         classSwitcherOpen: 'bx--account-switcher--open',
-        classLinkedIcon: '.bx--account-switcher__linked-icon',
+        classLinkedIcon: '.bx--account-switcher__linked-icon'
       });
     });
 

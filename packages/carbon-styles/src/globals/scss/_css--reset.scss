@@ -112,14 +112,14 @@
 
     // Chrome 62 fix
     button,
-    input[type="button"],
-    input[type="submit"],
-    input[type="reset"],
-    input[type="file"] {
+    input[type='button'],
+    input[type='submit'],
+    input[type='reset'],
+    input[type='file'] {
       border-radius: 0;
     }
 
-    input[type="text"]::-ms-clear {
+    input[type='text']::-ms-clear {
       display: none;
     }
 

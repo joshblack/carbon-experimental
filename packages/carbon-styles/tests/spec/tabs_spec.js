@@ -17,7 +17,7 @@ describe('Test tabs', function() {
           classActive: 'bx--tabs__nav-item--selected',
           classHidden: 'bx--tabs__nav--hidden',
           eventBeforeSelected: 'tab-beingselected',
-          eventAfterSelected: 'tab-selected',
+          eventAfterSelected: 'tab-selected'
         });
       } finally {
         stubUpdateTriggerText.restore();

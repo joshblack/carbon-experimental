@@ -95,7 +95,7 @@ class Search extends mixin(createComponent, initComponentBySearch) {
     selectorClearIcon: '.bx--search-close',
     selectorIconContainer: '.bx--search-button[data-search-toggle]',
     classClearHidden: 'bx--search-close--hidden',
-    classLayoutHidden: 'bx--search-view--hidden',
+    classLayoutHidden: 'bx--search-view--hidden'
   };
 
   /**

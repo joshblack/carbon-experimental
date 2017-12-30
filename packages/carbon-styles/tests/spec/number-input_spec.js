@@ -31,7 +31,7 @@ describe('Test Number Input', function() {
 
     it('should set default options', function() {
       expect(instance.options).to.deep.equal({
-        selectorInit: '[data-numberinput]',
+        selectorInit: '[data-numberinput]'
       });
     });
 

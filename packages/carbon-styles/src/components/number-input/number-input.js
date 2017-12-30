@@ -39,7 +39,7 @@ class NumberInput extends mixin(createComponent, initComponentBySearch) {
     numberInput.dispatchEvent(
       new CustomEvent('change', {
         bubbles: true,
-        cancelable: false,
+        cancelable: false
       })
     );
   }
@@ -61,7 +61,7 @@ class NumberInput extends mixin(createComponent, initComponentBySearch) {
    * @property {string} selectorInit The CSS selector to find number input UIs.
    */
   static options = {
-    selectorInit: '[data-numberinput]',
+    selectorInit: '[data-numberinput]'
   };
 }
 

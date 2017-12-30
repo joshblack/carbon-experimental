@@ -107,7 +107,7 @@ describe('Test accordion', function() {
       searches[0].classList.add(toolbars[0].classSearchActive);
       searches[1].dispatchEvent(
         Object.assign(new CustomEvent('keydown', { bubbles: true }), {
-          which: 32,
+          which: 32
         })
       );
       expect(searches[0].classList.contains('bx--toolbar-search--active')).to.be.false;

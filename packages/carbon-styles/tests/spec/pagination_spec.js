@@ -25,7 +25,7 @@ describe('Test pagination', function() {
         selectorPageForward: '[data-page-forward]',
         eventItemsPerPage: 'itemsPerPage',
         eventPageNumber: 'pageNumber',
-        eventPageChange: 'pageChange',
+        eventPageChange: 'pageChange'
       });
     });
 

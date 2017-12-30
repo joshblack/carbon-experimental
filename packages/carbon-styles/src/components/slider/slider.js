@@ -107,7 +107,7 @@ class Slider extends mixin(createComponent, initComponentBySearch, eventedState)
           40: -1, // decreasing
           37: -1, // decreasing
           38: 1, // increasing
-          39: 1, // increasing
+          39: 1 // increasing
         }[evt.which];
 
         if (direction !== undefined) {
@@ -156,7 +156,7 @@ class Slider extends mixin(createComponent, initComponentBySearch, eventedState)
       value: Number(this.input.value),
       min: Number(this.input.min),
       max: Number(this.input.max),
-      step: this.input.step ? Number(this.input.step) : 1,
+      step: this.input.step ? Number(this.input.step) : 1
     };
     return values;
   }
@@ -206,7 +206,7 @@ class Slider extends mixin(createComponent, initComponentBySearch, eventedState)
     selectorInput: '.bx--slider__input',
     eventBeforeSliderValueChange: 'slider-before-value-change',
     eventAfterSliderValueChange: 'slider-after-value-change',
-    stepMultiplier: 4,
+    stepMultiplier: 4
   };
 }
 

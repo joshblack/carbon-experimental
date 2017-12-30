@@ -18,7 +18,6 @@ Resolves {{ issue number(s) here }}
 
 {{ Description of things changed }}
 
-
 ## Testing / Reviewing
 
 {{ Add descriptions, steps or a checklist for how reviewers can verify this PR works or not }}

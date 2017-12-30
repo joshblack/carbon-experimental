@@ -6,18 +6,19 @@ The various card HTML variations of previous versions are now replaced by two si
 
 The `_card.scss` file is now located at `src/components/card/_card.scss`. You will need to update any `@import` statements for this file to reflect this change.
 
-**New**: 
+**New**:
+
 ```scss
 @import 'path_to_node_modules/carbon-components/src/components/card/card';
 ```
 
-**Old**: 
+**Old**:
+
 ```scss
 @import 'path_to_node_modules/@console/bluemix-components/src/components/card/card';
 ```
 
 `.bx--card__card-footer` is now `.bx--card-footer`
-
 
 ### JavaScript
 

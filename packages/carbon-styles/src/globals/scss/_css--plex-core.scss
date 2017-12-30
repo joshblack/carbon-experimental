@@ -10,28 +10,19 @@ $unicodes: (
 );
 
 $families: (
-  "Mono": unquote("\'ibm-plex-mono\'"),
-  "Sans": unquote("\'ibm-plex-sans\'"),
+  'Mono': unquote("'ibm-plex-mono'"),
+  'Sans': unquote("'ibm-plex-sans'")
 );
 
 $fallbacks: (
-  "Mono": unquote("\'ibm-plex-mono\', \'Menlo\', \'DejaVu Sans Mono\', \'Bitstream Vera Sans Mono\', Courier, monospace"),
-  "Sans": unquote("\'ibm-plex-sans\', \'Helvetica Neue\', Arial, sans-serif"),
+  'Mono': unquote("'ibm-plex-mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"),
+  'Sans': unquote("'ibm-plex-sans', 'Helvetica Neue', Arial, sans-serif")
 );
 
 $weights: (
-  "Light": (
-    font-style: normal,
-    font-weight: 300,
-  ),
-  "Regular": (
-    font-style: normal,
-    font-weight: 400,
-  ),
-  "SemiBold": (
-    font-style: normal,
-    font-weight: 600,
-  )
+  'Light': (font-style: normal, font-weight: 300),
+  'Regular': (font-style: normal, font-weight: 400),
+  'SemiBold': (font-style: normal, font-weight: 600)
 );
 
 @mixin plex-font-face {
@@ -40,8 +31,8 @@ $weights: (
       @each $unicode, $range in $unicodes {
         @font-face {
           font-family: $name;
-          font-style: map-get($styles, "font-style");
-          font-weight: map-get($styles, "font-weight");
+          font-style: map-get($styles, 'font-style');
+          font-weight: map-get($styles, 'font-weight');
           src: url('#{$font-path}/IBMPlex#{$family}-#{$weight}-#{$unicode}.woff2') format('woff2'),
             url('#{$font-path}/IBMPlex#{$family}-#{$weight}-#{$unicode}.woff') format('woff');
           unicode-range: map-get($unicodes, $unicode);

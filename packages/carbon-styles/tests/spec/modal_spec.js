@@ -35,7 +35,7 @@ describe('Test modal', function() {
         eventBeforeShown: 'modal-beingshown',
         eventAfterShown: 'modal-shown',
         eventBeforeHidden: 'modal-beinghidden',
-        eventAfterHidden: 'modal-hidden',
+        eventAfterHidden: 'modal-hidden'
       });
     });
 
@@ -209,7 +209,7 @@ describe('Test modal', function() {
       events.on(element, 'modal-hidden', spyAfterHidden);
       element.ownerDocument.body.dispatchEvent(
         Object.assign(new CustomEvent('keydown', { bubbles: true }), {
-          which: 27,
+          which: 27
         })
       );
       modal.element.dispatchEvent(new CustomEvent('transitionend', { bubbles: true }));

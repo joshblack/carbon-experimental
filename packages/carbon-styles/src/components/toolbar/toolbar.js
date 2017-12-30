@@ -128,7 +128,7 @@ class Toolbar extends mixin(createComponent, initComponentBySearch) {
     selectorSearch: '[data-toolbar-search]',
     selectorRowHeight: '[data-row-height]',
     classTallRows: 'bx--responsive-table--tall',
-    classSearchActive: 'bx--toolbar-search--active',
+    classSearchActive: 'bx--toolbar-search--active'
   };
 }
 

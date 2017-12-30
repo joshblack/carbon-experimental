@@ -44,9 +44,9 @@ const optimizedResize = (function optimizedResize() {
           if (index >= 0) {
             callbacks.splice(index, 1);
           }
-        },
+        }
       };
-    },
+    }
   };
 })();
 

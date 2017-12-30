@@ -14,7 +14,7 @@ describe('Test init component by launcher', function() {
     static options = {
       selectorInit: '[data-my-component]',
       initEventNames: ['foo'],
-      attribInitTarget: 'data-init-target',
+      attribInitTarget: 'data-init-target'
     };
     static create(element, options) {
       spyCreate(element, options);

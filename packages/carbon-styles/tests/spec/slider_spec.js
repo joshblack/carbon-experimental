@@ -32,7 +32,7 @@ describe('Test slider', function() {
         selectorInput: '.bx--slider__input',
         eventBeforeSliderValueChange: 'slider-before-value-change',
         eventAfterSliderValueChange: 'slider-after-value-change',
-        stepMultiplier: 4,
+        stepMultiplier: 4
       });
     });
 

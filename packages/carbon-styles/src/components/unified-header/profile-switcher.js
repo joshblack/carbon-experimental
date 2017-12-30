@@ -281,7 +281,7 @@ class ProfileSwitcher extends mixin(createComponent, initComponentBySearch) {
     selectorOrgDropdown: '[data-dropdown-org]',
     selectorSpaceDropdown: '[data-dropdown-space]',
     classSwitcherOpen: 'bx--account-switcher--open',
-    classLinkedIcon: '.bx--account-switcher__linked-icon',
+    classLinkedIcon: '.bx--account-switcher__linked-icon'
   };
 
   /**

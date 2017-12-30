@@ -87,20 +87,20 @@ class FloatingMenu extends mixin(createComponent, eventedShowHideState, trackBlu
     return {
       left: () => ({
         left: refLeft - menuWidth - offset.left,
-        top: refCenterVertical - menuHeight / 2 + scroll + offset.top,
+        top: refCenterVertical - menuHeight / 2 + scroll + offset.top
       }),
       top: () => ({
         left: refCenterHorizontal - menuWidth / 2 + offset.left,
-        top: refTop - menuHeight + scroll - offset.top,
+        top: refTop - menuHeight + scroll - offset.top
       }),
       right: () => ({
         left: refRight + offset.left,
-        top: refCenterVertical - menuHeight / 2 + scroll + offset.top,
+        top: refCenterVertical - menuHeight / 2 + scroll + offset.top
       }),
       bottom: () => ({
         left: refCenterHorizontal - menuWidth / 2 + offset.left,
-        top: refBottom + scroll + offset.top,
-      }),
+        top: refBottom + scroll + offset.top
+      })
     }[direction]();
   }
 
@@ -117,7 +117,7 @@ class FloatingMenu extends mixin(createComponent, eventedShowHideState, trackBlu
     const styles = {
       position: 'absolute',
       right: 'auto',
-      margin: 0,
+      margin: 0
     };
     Object.keys(styles).forEach(key => {
       const expected = typeof styles[key] === 'number' ? parseFloat(styles[key]) : styles[key];
@@ -204,8 +204,8 @@ class FloatingMenu extends mixin(createComponent, eventedShowHideState, trackBlu
     refNode: null, // Should be provided from options arg in constructor
     offset: {
       left: 0,
-      top: 0,
-    },
+      top: 0
+    }
   };
 
   static components = new WeakMap();

@@ -45,7 +45,7 @@ class Tooltip extends mixin(createComponent, initComponentByEvent, eventedShowHi
       this.tooltip = FloatingMenu.create(tooltip, {
         refNode: this.element,
         classShown: this.options.classShown,
-        offset: this.options.objMenuOffset,
+        offset: this.options.objMenuOffset
       });
       this.children.push(this.tooltip);
     }
@@ -67,7 +67,7 @@ class Tooltip extends mixin(createComponent, initComponentByEvent, eventedShowHi
       focus: 'shown',
       blur: 'hidden',
       touchleave: 'hidden',
-      touchcancel: 'hidden',
+      touchcancel: 'hidden'
     }[event.type];
     this.changeState(state, getLaunchingDetails(event));
   }
@@ -79,7 +79,7 @@ class Tooltip extends mixin(createComponent, initComponentByEvent, eventedShowHi
     classShown: 'bx--tooltip--shown',
     attribTooltipTarget: 'data-tooltip-target',
     objMenuOffset: { top: 10, left: 0 },
-    initEventNames: ['mouseover', 'focus'],
+    initEventNames: ['mouseover', 'focus']
   };
 }
 

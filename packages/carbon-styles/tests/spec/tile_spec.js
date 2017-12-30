@@ -32,7 +32,7 @@ describe('Test tile', function() {
         selectorTileInput: '[data-tile-input]',
         classExpandedTile: 'bx--tile--is-expanded',
         classClickableTile: 'bx--tile--is-clicked',
-        classSelectableTile: 'bx--tile--is-selected',
+        classSelectableTile: 'bx--tile--is-selected'
       });
     });
 
@@ -118,7 +118,7 @@ describe('Test tile', function() {
 
     it('Should have the is-expanded class after enter has been pressed', function() {
       tileElement.dispatchEvent(new CustomEvent('keydown', { bubbles: true }), {
-        which: 13,
+        which: 13
       });
       expect(tileElement.classList.contains('bx--tile--is-expanded')).to.be.true;
     });

@@ -24,7 +24,7 @@
       .bx--accordion__arrow {
         @include focus-outline('border');
         overflow: visible; // safari fix
-        outline-offset: -.5px; // safari fix
+        outline-offset: -0.5px; // safari fix
       }
     }
 
@@ -51,7 +51,7 @@
       .bx--accordion__arrow {
         @include focus-outline('border');
         overflow: visible; // safari fix
-        outline-offset: -.5px; // safari fix
+        outline-offset: -0.5px; // safari fix
       }
     }
   }

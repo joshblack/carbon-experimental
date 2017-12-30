@@ -49,7 +49,7 @@ class CopyButton extends mixin(createComponent, InitComponentBySearch) {
     selectorInit: '[data-copy-btn]',
     feedbackTooltip: '[data-feedback]',
     classShowFeedback: 'bx--btn--copy__feedback--displayed',
-    timeoutValue: 2000,
+    timeoutValue: 2000
   };
 }
 

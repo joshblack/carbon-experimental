@@ -13,15 +13,15 @@ module.exports = {
     resolve(),
     commonjs({
       include: 'node_modules/**',
-      sourceMap: false,
+      sourceMap: false
     }),
     babel({
       exclude: ['node_modules/**'], // only transpile our source code
-      plugins: ['external-helpers'],
+      plugins: ['external-helpers']
     }),
     replace({
-      'process.env.NODE_ENV': JSON.stringify('production'),
-    }),
+      'process.env.NODE_ENV': JSON.stringify('production')
+    })
   ],
-  file: 'scripts/carbon-components.js',
+  file: 'scripts/carbon-components.js'
 };

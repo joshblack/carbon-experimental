@@ -65,7 +65,7 @@ class FabButton extends mixin(createComponent, initComponentByEvent) {
    */
   static options = {
     selectorInit: '[data-fab]',
-    initEventNames: ['click'],
+    initEventNames: ['click']
   };
 }
 

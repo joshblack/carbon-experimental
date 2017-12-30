@@ -7,7 +7,7 @@ describe('Test init component by search', function() {
   const options = { foo: 'Foo' };
   const Class = class extends mixin(initComponentBySearch) {
     static options = {
-      selectorInit: '[data-my-component]',
+      selectorInit: '[data-my-component]'
     };
     static create = spyCreate;
     static components = new WeakMap();

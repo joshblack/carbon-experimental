@@ -31,14 +31,14 @@ describe('ToastNotification', function() {
         selectorInit: '[data-notification]',
         selectorButton: '[data-notification-btn]',
         eventBeforeDeleteNotification: 'notification-before-delete',
-        eventAfterDeleteNotification: 'notification-after-delete',
+        eventAfterDeleteNotification: 'notification-after-delete'
       });
     });
 
     it('should search for an element with options.selectorInit', function() {
       toastElement.dataset.id = 'foo';
       const toastInstance = new Notification(toastElement, {
-        selectorInit: '[data-id="foo"]',
+        selectorInit: '[data-id="foo"]'
       });
       expect(toastInstance.options.selectorInit).to.equal('[data-id="foo"]');
       toastInstance.release();

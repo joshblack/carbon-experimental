@@ -63,7 +63,7 @@ class Dropdown extends mixin(createComponent, initComponentBySearch, trackBlur) 
     const isOpen = this.element.classList.contains('bx--dropdown--open');
     const direction = {
       38: this.constructor.NAVIGATE.BACKWARD,
-      40: this.constructor.NAVIGATE.FORWARD,
+      40: this.constructor.NAVIGATE.FORWARD
     }[event.which];
     if (isOpen && direction !== undefined) {
       this.navigate(direction);
@@ -94,7 +94,7 @@ class Dropdown extends mixin(createComponent, initComponentBySearch, trackBlur) 
       const actions = {
         add: isOfSelf && event.which === 40 && !isOpen,
         remove: (!isOfSelf || event.which === 27) && isOpen,
-        toggle: isOfSelf && event.which !== 27 && event.which !== 40,
+        toggle: isOfSelf && event.which !== 27 && event.which !== 40
       };
       Object.keys(actions).forEach(action => {
         if (actions[action]) {
@@ -146,7 +146,7 @@ class Dropdown extends mixin(createComponent, initComponentBySearch, trackBlur) 
     const eventStart = new CustomEvent(this.options.eventBeforeSelected, {
       bubbles: true,
       cancelable: true,
-      detail: { item: itemToSelect },
+      detail: { item: itemToSelect }
     });
 
     if (this.element.dispatchEvent(eventStart)) {
@@ -169,7 +169,7 @@ class Dropdown extends mixin(createComponent, initComponentBySearch, trackBlur) 
         new CustomEvent(this.options.eventAfterSelected, {
           bubbles: true,
           cancelable: true,
-          detail: { item: itemToSelect },
+          detail: { item: itemToSelect }
         })
       );
     }
@@ -212,7 +212,7 @@ class Dropdown extends mixin(createComponent, initComponentBySearch, trackBlur) 
     selectorItemSelected: '.bx--dropdown--selected',
     classSelected: 'bx--dropdown--selected',
     eventBeforeSelected: 'dropdown-beingselected',
-    eventAfterSelected: 'dropdown-selected',
+    eventAfterSelected: 'dropdown-selected'
   };
 
   /**
@@ -225,7 +225,7 @@ class Dropdown extends mixin(createComponent, initComponentBySearch, trackBlur) 
    */
   static NAVIGATE = {
     BACKWARD: -1,
-    FORWARD: 1,
+    FORWARD: 1
   };
 }
 

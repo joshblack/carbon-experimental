@@ -49,7 +49,7 @@ class Notification extends mixin(createComponent, initComponentBySearch, evented
     selectorInit: '[data-notification]',
     selectorButton: '[data-notification-btn]',
     eventBeforeDeleteNotification: 'notification-before-delete',
-    eventAfterDeleteNotification: 'notification-after-delete',
+    eventAfterDeleteNotification: 'notification-after-delete'
   };
 }
 

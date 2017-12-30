@@ -33,7 +33,7 @@ describe('Lightbox', () => {
         selectorScrollRight: '[data-scroll-right]',
         selectorScrollLeft: '[data-scroll-left]',
         selectorLightboxItem: '.bx--lightbox__item',
-        classActiveItem: 'bx--lightbox__item--shown',
+        classActiveItem: 'bx--lightbox__item--shown'
       });
     });
 

@@ -39,7 +39,7 @@ class ContentSwitcher extends mixin(createComponent, initComponentBySearch, even
       this.changeState({
         group: 'selected',
         item: button,
-        launchingEvent: event,
+        launchingEvent: event
       });
     }
   }
@@ -93,7 +93,7 @@ class ContentSwitcher extends mixin(createComponent, initComponentBySearch, even
     this.changeState(
       {
         group: 'selected',
-        item,
+        item
       },
       error => {
         if (error) {
@@ -135,7 +135,7 @@ class ContentSwitcher extends mixin(createComponent, initComponentBySearch, even
     selectorButton: 'input[type="radio"], .bx--content-switcher-btn',
     classActive: 'bx--content-switcher--selected',
     eventBeforeSelected: 'content-switcher-beingselected',
-    eventAfterSelected: 'content-switcher-selected',
+    eventAfterSelected: 'content-switcher-selected'
   };
 }
 

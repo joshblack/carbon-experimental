@@ -55,7 +55,7 @@ export default function(ToMix) {
             for (let handle = handles.pop(); handle; handle = handles.pop()) {
               handle.release();
             }
-          },
+          }
         };
       }
       return '';

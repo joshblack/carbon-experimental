@@ -66,7 +66,7 @@ describe('Test interior left nav', function() {
 
     it('Should accept an option in the constructor to override', function() {
       instance2 = new InteriorLeftNav(element, {
-        keepOpen: true,
+        keepOpen: true
       });
       expect(instance2.options.keepOpen).to.be.true;
       document.body.removeChild(container);

@@ -92,7 +92,7 @@ class DatePicker extends mixin(createComponent, initComponentBySearch) {
           this._updateClassNames(calendar);
         },
         nextArrow: this._rightArrowHTML(),
-        prevArrow: this._leftArrowHTML(),
+        prevArrow: this._leftArrowHTML()
       })
     );
     if (type === 'range') {
@@ -203,7 +203,7 @@ class DatePicker extends mixin(createComponent, initComponentBySearch) {
     classWeekday: 'bx--date-picker__weekday',
     classDay: 'bx--date-picker__day',
     attribType: 'data-date-picker-type',
-    dateFormat: 'm/d/Y',
+    dateFormat: 'm/d/Y'
   };
 
   /**

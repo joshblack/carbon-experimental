@@ -39,7 +39,7 @@ const getEachContent = glob =>
     Promise.all(filePaths.map(filePath => readFile(filePath, { encoding: 'utf8' }))).then(contents =>
       contents.map((content, i) => ({
         name: path.basename(filePaths[i], '.html'),
-        content,
+        content
       }))
     )
   );
@@ -69,11 +69,11 @@ const topRouteHandler = (req, res) => {
                 Object.assign(
                   {
                     name: dirs[i],
-                    selected: name === dirs[i] || subItems.find(subItem => name === subItem.name),
+                    selected: name === dirs[i] || subItems.find(subItem => name === subItem.name)
                   },
                   subItems.length <= 1
                     ? {
-                        content: subItems[0].content,
+                        content: subItems[0].content
                       }
                     : {},
                   subItems.length <= 1
@@ -81,9 +81,9 @@ const topRouteHandler = (req, res) => {
                     : {
                         items: subItems.map(subItem =>
                           Object.assign(subItem, {
-                            selected: name === subItem.name,
+                            selected: name === subItem.name
                           })
-                        ),
+                        )
                       }
                 )
             )
@@ -99,7 +99,7 @@ const topRouteHandler = (req, res) => {
       )
       .then(links => {
         res.render('demo-all', {
-          links,
+          links
         });
       })
       .catch(error => {
@@ -124,7 +124,7 @@ app.get('/components/:component', (req, res) => {
           res.status(404).end();
         } else {
           res.render('demo-all', {
-            content: html,
+            content: html
           });
         }
       })
@@ -147,7 +147,7 @@ app.get('/grid', (req, res) => {
           res.status(404).end();
         } else {
           res.render('demo-grid', {
-            html: results[0],
+            html: results[0]
           });
         }
       })
@@ -170,7 +170,7 @@ app.get('/tile-demo', (req, res) => {
           res.status(404).end();
         } else {
           res.render('demo-grid', {
-            html: results[0],
+            html: results[0]
           });
         }
       })

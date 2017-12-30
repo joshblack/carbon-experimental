@@ -111,7 +111,7 @@ describe('Dropdown', function() {
       element.classList.add('bx--dropdown--open');
       itemNode.dispatchEvent(
         Object.assign(new CustomEvent('keydown', { bubbles: true }), {
-          which: 32,
+          which: 32
         })
       );
       expect(element.classList.contains('bx--dropdown--open'), 'Open state').to.be.true;
@@ -131,7 +131,7 @@ describe('Dropdown', function() {
       element.classList.add('bx--dropdown--open');
       itemNode.dispatchEvent(
         Object.assign(new CustomEvent('keydown', { bubbles: true }), {
-          which: 27,
+          which: 27
         })
       );
       expect(element.classList.contains('bx--dropdown--open'), 'Open state').to.be.false;
@@ -304,7 +304,7 @@ describe('Dropdown', function() {
       stubsFocus.push(...itemNodes.map(item => sinon.stub(item, 'focus')));
       const defaultPrevented = !element.dispatchEvent(
         Object.assign(new CustomEvent('keydown', { cancelable: true }), {
-          which: 40,
+          which: 40
         })
       );
       expect(defaultPrevented, 'Canceling event').to.be.true;
@@ -326,7 +326,7 @@ describe('Dropdown', function() {
       stubsFocus.push(...itemNodes.map(item => sinon.stub(item, 'focus')));
       const defaultPrevented = !element.dispatchEvent(
         Object.assign(new CustomEvent('keydown', { cancelable: true }), {
-          which: 40,
+          which: 40
         })
       );
       expect(defaultPrevented, 'Canceling event').to.be.true;
@@ -340,7 +340,7 @@ describe('Dropdown', function() {
       stubsFocus.push(...itemNodes.map(item => sinon.stub(item, 'focus')));
       const defaultPrevented = !element.dispatchEvent(
         Object.assign(new CustomEvent('keydown', { cancelable: true }), {
-          which: 38,
+          which: 38
         })
       );
       expect(defaultPrevented, 'Canceling event').to.be.true;
@@ -354,7 +354,7 @@ describe('Dropdown', function() {
       stubsFocus.push(...itemNodes.map(item => sinon.stub(item, 'focus')));
       const defaultPrevented = !element.dispatchEvent(
         Object.assign(new CustomEvent('keydown', { cancelable: true }), {
-          which: 40,
+          which: 40
         })
       );
       expect(defaultPrevented, 'Canceling event').to.be.true;
@@ -380,7 +380,7 @@ describe('Dropdown', function() {
       stubsFocus.push(...itemNodes.map(item => sinon.stub(item, 'focus')));
       const defaultPrevented = !element.dispatchEvent(
         Object.assign(new CustomEvent('keydown', { cancelable: true }), {
-          which: 40,
+          which: 40
         })
       );
       expect(defaultPrevented, 'Canceling event').to.be.true;
@@ -409,7 +409,7 @@ describe('Dropdown', function() {
       stubsFocus.push(...itemNodes.map(item => sinon.stub(item, 'focus')));
       const defaultPrevented = !element.dispatchEvent(
         Object.assign(new CustomEvent('keydown', { cancelable: true }), {
-          which: 40,
+          which: 40
         })
       );
       expect(defaultPrevented, 'Canceling event').to.be.true;
@@ -423,7 +423,7 @@ describe('Dropdown', function() {
       stubsFocus.push(...itemNodes.map(item => sinon.stub(item, 'focus')));
       const defaultPrevented = !element.dispatchEvent(
         Object.assign(new CustomEvent('keydown', { cancelable: true }), {
-          which: 40,
+          which: 40
         })
       );
       expect(defaultPrevented, 'Canceling event').not.to.be.true;

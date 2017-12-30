@@ -225,7 +225,7 @@ export {
    * Lightbox.
    * @type Lightbox
    */
-  Lightbox,
+  Lightbox
 };
 
 /**
@@ -262,7 +262,7 @@ export const componentClasses = [
   Slider,
   Tile,
   Carousel,
-  Lightbox,
+  Lightbox
   // Floating menu instances are created by Tooltip, etc. and thus not for automatic instantiation
 ];
 
