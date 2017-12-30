@@ -1,0 +1,28 @@
+{
+  "bundleSizes": {
+    "cjs.carbon-react.development": {
+      "size": 854521,
+      "gzip": 195328
+    },
+    "es.carbon-react.development": {
+      "size": 847337,
+      "gzip": 194773
+    },
+    "umd.carbon-react.development": {
+      "size": 855509,
+      "gzip": 195589
+    },
+    "cjs.carbon-react.production": {
+      "size": 243506,
+      "gzip": 57914
+    },
+    "es.carbon-react.production": {
+      "size": 236641,
+      "gzip": 57441
+    },
+    "umd.carbon-react.production": {
+      "size": 217108,
+      "gzip": 56194
+    }
+  }
+}

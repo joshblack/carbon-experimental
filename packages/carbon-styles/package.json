@@ -1,8 +1,6 @@
 {
-  "name": "carbon-components",
-  "description": "Carbon Components is a component library for IBM Cloud",
-  "homepage": "http://carbondesignsystem.com/",
-  "version": "7.2.1",
+  "name": "@carbon/styles",
+  "version": "9.0.0",
   "module": "es/index.js",
   "main": "umd/index.js",
   "repository": {
